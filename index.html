@@ -511,6 +511,22 @@
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/50784139" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <!-- /Yandex.Metrika counter -->
+        <script type="text/javascript">
+    // Set the domain/URL to your website.
+    var myDomain = "monecle.com";
+	var get = location.search;
+    // Grab all links (anchor tags)
+    var links = document.getElementsByTagName('a');
+    // Loop through all links
+    Array.prototype.forEach.call(links, function (link) {
+        // If we find a link that does not go to my domain
+      console.log(link.href)
+        if ( link.href.indexOf(myDomain) > 0 ) {
+           // Take the href and append the UTM parameters
+           link.href += get;
+        }
+    });
+</script>
     </body>
 </html>
         
